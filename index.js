@@ -41,7 +41,21 @@ class Airplane {
 */
 
 class Person {
-
+  function Person( name, age) {
+    this.name = name;
+    this.age = age;
+    this.stomach = [];                                                                        
+  }
+  Person.prototype.eat = function (food) {
+    if (this.stomach.length >= 10) return;
+    this.stomach.push(food);
+  };
+  Person.prototype.poop = function () {
+    this.stomach = [];
+  };
+  Person.prototype.toString = function () {
+     return `${this.name}, ${this.age}`
+  };
 }
 
 /*
@@ -59,6 +73,20 @@ class Person {
 */
 
 class Car {
+  function Car(models, milesPerGallon) {
+    this.tank = 0;
+    this.odometer = 0;
+    this.models = models;
+    this.milesPerGallon = milesPerGallon;
+}
+
+Car.prototype.fill= function (gallons) {
+  this.tank += gallons;
+};
+Car.prototype.drive = function (distance) {
+  this.odometer += distance;
+};
+
 
 }
 
