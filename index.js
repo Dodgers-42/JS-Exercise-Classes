@@ -41,19 +41,19 @@ class Airplane {
 */
 
 class Person {
-  function Person( name, age) {
+  constructor( name, age) {
     this.name = name;
     this.age = age;
     this.stomach = [];                                                                        
   }
-  Person.prototype.eat = function (food) {
+   speak(food) {
     if (this.stomach.length >= 10) return;
     this.stomach.push(food);
   };
-  Person.prototype.poop = function () {
+   speak() {
     this.stomach = [];
   };
-  Person.prototype.toString = function () {
+   speak() {
      return `${this.name}, ${this.age}`
   };
 }
@@ -73,17 +73,17 @@ class Person {
 */
 
 class Car {
-  function Car(models, milesPerGallon) {
+  constructor(models, milesPerGallon) {
     this.tank = 0;
     this.odometer = 0;
     this.models = models;
     this.milesPerGallon = milesPerGallon;
 }
 
-Car.prototype.fill= function (gallons) {
+ speak(gallons) {
   this.tank += gallons;
 };
-Car.prototype.drive = function (distance) {
+ speak(distance) {
   this.odometer += distance;
 };
 
@@ -103,8 +103,16 @@ Car.prototype.drive = function (distance) {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-
+  constructor(keys) {
+    this.name = name;
+    this.age = age;
+    this.location = location;
+  }
+  speak() {
+    return `"Hello my name is" ${this.name}, "I am from" ${this.location}`
+ };
 }
+
 
 /*
   TASK 4
