@@ -46,14 +46,14 @@ class Person {
     this.age = age;
     this.stomach = [];                                                                        
   }
-   speak(food) {
+   eat(food) {
     if (this.stomach.length >= 10) return;
     this.stomach.push(food);
   };
-   speak() {
+   poop() {
     this.stomach = [];
   };
-   speak() {
+   toString() {
      return `${this.name}, ${this.age}`
   };
 }
@@ -73,17 +73,17 @@ class Person {
 */
 
 class Car {
-  constructor(models, milesPerGallon) {
+  constructor(model, milesPerGallon) {
     this.tank = 0;
     this.odometer = 0;
-    this.models = models;
+    this.model = model;
     this.milesPerGallon = milesPerGallon;
 }
 
- speak(gallons) {
+ fill(gallons) {
   this.tank += gallons;
 };
- speak(distance) {
+ drive(distance) {
   this.odometer += distance;
 };
 
@@ -103,14 +103,14 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-  constructor(keys) {
-    this.name = name;
-    this.age = age;
-    this.location = location;
-  }
-  speak() {
-    return `"Hello my name is" ${this.name}, "I am from" ${this.location}`
- };
+//   constructor(keys) {
+//     this.name = name;
+//     this.age = age;
+//     this.location = location;
+//   }
+//   speak() {
+//     return `"Hello my name is" ${this.name}, "I am from" ${this.location}`
+//  };
 }
 
 
@@ -129,6 +129,11 @@ class Lambdasian {
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
 class Instructor {
+  // constructor(keys) {
+  //   this.specialty = specialty;
+  //   this.favLanguage = favLanguage;
+  //   this.catchPhrase = catchPhrase;
+  // }
 
 }
 
